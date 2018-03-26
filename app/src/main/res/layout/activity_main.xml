@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context="gorev.yerservis.com.gorevgo.AnaMenu">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/birim"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+                <EditText
+                    android:id="@+id/baslik"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/birim"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:hint="Task Title" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+                <EditText
+                    android:id="@+id/icerik"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:hint="Task Content"
+                    android:minHeight="100dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/birim"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/saat_al"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/birim"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Pick time"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/tarih_al"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/birim"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Pick Date"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:minHeight="100dp"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+                <EditText
+                    android:id="@+id/acik_adres"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:hint="Adress"
+                    android:minHeight="100dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="80dp"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/mesafegoster"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/birim"
+                    android:paddingLeft="10dp"
+                    android:text="Warn at 200m distance"
+                    android:textStyle="bold" />
+
+                <SeekBar
+                    android:id="@+id/mesafeolcer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/birim"
+                    android:background="@android:color/white"
+                    android:progress="20" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/birim"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <Button
+                    android:id="@+id/haritadan_bul"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/birim"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Set Location"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/GorevKaydet"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/birim"
+                android:layout_margin="4dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="Create Task"
+                android:textColor="@color/beyaz" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
